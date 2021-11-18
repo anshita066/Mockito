@@ -27,22 +27,5 @@ class ExampleInstrumentedTest {
     /**
      * Use this test to uncheck the checkbox
      */
-    @Test
-    fun testAddToFavorite_CheckBoxNotChecked() {
-        Espresso.onView(withId(R.id.addToFavorite_BTN))
-            .perform(ViewActions.click())
-        Espresso.onView(withId(R.id.itemFavorite_CB))
-            .check(ViewAssertions.matches(ViewMatchers.isNotChecked()))
-    }
 
-    /**
-     * Use this test to check the checkbox
-     */
-    @Test
-    fun testAddToFavorite_CheckBoxChecked() {
-        Espresso.onView(withId(R.id.addToFavorite_BTN))
-            .perform(ViewActions.click())
-        Espresso.onView(withId(R.id.itemFavorite_CB))
-            .check(ViewAssertions.matches(ViewMatchers.isChecked()))
-    }
 }
